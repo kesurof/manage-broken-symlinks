@@ -1,0 +1,53 @@
+# Configuration personnelle
+config.yaml
+
+# Logs et données temporaires
+logs/
+logs/*
+logs/**/*
+*.log
+*.jsonl
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
+*~
+
+# Environnements virtuels Python
+venv/
+env/
+.venv/
+.env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE et éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Fichiers système
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Données sensibles
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+private/
+
+# Fichiers temporaires
+tmp/
+temp/
+.tmp/

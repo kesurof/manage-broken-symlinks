@@ -1,0 +1,54 @@
+# Configuration du scanner de symlinks cassés - EXEMPLE
+# Documentation: Détecte et nettoie les symlinks cassés vers montages Decypharr
+# 
+# Instructions:
+# 1. Copiez ce fichier vers config.yaml
+# 2. Modifiez les chemins selon votre configuration
+# 3. Ajustez les instances selon vos besoins
+
+# Répertoire racine des médias
+# Remplacez par votre répertoire de médias
+media_dir: /path/to/your/media/directory
+
+# Répertoire de sortie des logs JSON
+# Remplacez par le chemin souhaité pour les logs
+log_dir: ./logs
+
+# Instances Decypharr
+# Configurez selon vos instances Radarr/Sonarr
+instances:
+  # Instance Radarr - Films
+  - name: radarr
+    category: films
+    mount_path: /mnt/your-debrid-mount/path
+    media_folders:
+      - Films
+      - ANIMATION_Films
+      - ANIMATION_Films_Japonais
+  
+  # Instance Sonarr - Séries
+  - name: sonarr
+    category: series
+    mount_path: /mnt/your-debrid-mount/sonarr-path
+    media_folders:
+      - Series
+      - ANIMATION_Series
+      - ANIMATION_Series_Japonais
+      - Emissions_TV
+
+# Options de scan
+scan_options:
+  # Afficher barre de progression (auto-désactivé si non-TTY)
+  show_progress: true
+  
+  # Logs JSON structurés (JSONL)
+  json_logging: true
+  
+  # Logs syslog (journald)
+  syslog_logging: true
+  
+  # Identifiant syslog
+  syslog_ident: broken-symlinks
+
+
+  
